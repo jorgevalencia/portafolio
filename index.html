@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Jorge Valencia - Style Guide</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,300italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">Jorge Valencia</div>
+		<nav class="menu">
+			<a href="#intro">What I Do</a>
+			<a href="#color">My Work</a>
+			<a href="#btn">Who I Am</a>
+			<a href="#form">Get In Touch</a>
+		</nav>
+	</header>
+
+	<!--Intro section-->
+	<section class="section-intro" id="intro">
+		<main class="container">
+		<p class="saludo">Hi There, my name is Jorge Valencia</p>
+		<p class="big">I’m a UI/UX designer & front-end developer who makes awesome shit</p>
+		<p>I enjoy making the complex simple, turning problems into clean, attractive and intuitive interface designs.</p>
+		<p><a href="#">See my work</a> or get to <a href="#">know me first<</a>/p>
+		</main>
+	</section>
+
+	<!--Skills & Experience section-->
+	<section class="section-skills" id="skills">
+		<main class="container">
+		<p class="saludo">Hi There, my name is Jorge Valencia</p>
+		<p class="big">I’m a UI/UX designer & front-end developer who makes awesome shit</p>
+		<p>I enjoy making the complex simple, turning problems into clean, attractive and intuitive interface designs.</p>
+		<p><a href="#">See my work</a> or get to <a href="#">know me first<</a>/p>
+		</main>
+	</section>
+
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+</script>
