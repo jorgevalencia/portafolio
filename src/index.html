@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Jorge Valencia - Style Guide</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,300italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">Jorge Valencia</div>
+		<nav class="menu">
+			<a href="#typo">What I Do</a>
+			<a href="#color">My Work</a>
+			<a href="#btn">Who I Am</a>
+			<a href="#form">Get In Touch</a>
+		</nav>
+	</header>
+	<section class="section-intro" id="intro">
+		<main class="container">
+		Hi There, my name is Jorge Valencia
+		I’m a UI/UX designer & front-end developer who makes awesome shit
+		I enjoy making the complex simple, turning problems into clean, attractive and intuitive interface designs.
+		See my work or get to know me first
+		</main>
+	</section>
+	<section class="" id="color">
+		<main class="container">
+			<h1 class="brand-font">Colores</h1>
+			<div class="fondo-azul barra">#3A4853</div>
+			<div class="fondo-verde barra">#3A4853</div>
+			<div class="fondo-cafe barra">##979797</div>
+			<div class="fondo-claro barra">#F1F0EC</div>
+		</main>
+	</section>
+	<section class="fondo-claro" id="btn">
+		<main class="container">
+			<h1 class="brand-font">Botones</h1>
+			<a href="#" class="btn fondo-azul">Esto es un botón princial</a>
+			<a href="#" class="btn fondo-verde">Esto es un botón secundario</a>
+		</main>
+	</section>
+	<section class="fondo-verde" id="form">
+		<main class="container">
+			<h1 class="brand-font">Formulario</h1>
+				<form action="">
+				  <input type="text" placeholder="Tu nombre" value=""><br>
+				  <input type="text"  placeholder="Tu correo" value="">
+				  <textarea placeholder="Cuéntame algo sobre tu proyecto" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5"></textarea>
+				</form>
+				<button type="submit" id="edit-submit" name="op" value="Enviar">Contáctanos</button>
+		</main>
+	</section>
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+</script>
