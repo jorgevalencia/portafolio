@@ -6,7 +6,8 @@
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500|Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://allfont.es/allfont.css?fonts=montserrat-light);
 article,
 aside,
 details,
@@ -353,6 +354,37 @@ a::selection {
   color: #fff; }
 
 /**
+ * LAYOUT - Estructura gráfica del sitio
+ */
+section {
+  width: 100%; }
+
+.container {
+  padding: 2rem 1rem 3rem;
+  margin: 0 auto;
+  max-width: 728px;
+  width: 100%; }
+
+/**
+ * HEADER - Todos los elementos del header
+ */
+.logo {
+  float: left;
+  font-size: 1.6rem;
+  letter-spacing: .8rem; }
+
+.menu {
+  float: right; }
+  .menu a {
+    color: #FFF;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    line-height: 2.2;
+    margin: auto .4rem; }
+    .menu a:hover {
+      opacity: 0.8; }
+
+/**
  * FIXES
  */
 html {
@@ -371,101 +403,47 @@ html {
   zoom: 1; }
 
 /**
- * COLORES - Paleta de colores
- */
-.fondo-azul,
-.fondo-verde,
-.fondo-cafe {
-  color: #F1F0EC; }
-
-.fondo-azul {
-  background-color: #3A4853; }
-
-.fondo-verde {
-  background-color: #48ACA9; }
-
-.fondo-claro {
-  background-color: #F1F0EC; }
-
-.fondo-cafe {
-  background-color: #979797; }
-
-/**
  * HTML TAGS - Tags básicos que se se usan en el sitio
  */
 body {
-  font-family: 'Open Sans', sans-serif;
   color: #3A4853;
+  font-family: "Montserrat Light", arial;
   line-height: 1.4; }
 
 a {
-  color: #4ECDC4;
+  color: #48ACA9;
   text-decoration: none; }
 
 a:hover {
-  color: #fff;
+  color: #55b8b5;
   text-decoration: underline; }
 
-.fondo-verde a {
-  color: #F1F0EC; }
-
 h1 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: .8rem;
-  letter-spacing: 0.2rem; }
+  font-size: 2.5rem; }
 
 h2 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 2rem;
-  margin-bottom: .8rem;
-  font-weight: 400; }
+  font-size: 2rem; }
 
 h3, h4, h5, h6 {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: .5rem;
-  letter-spacing: 0.2rem; }
+  font-size: 2rem; }
 
-/**
- * LAYOUT - Estructura gráfica del sitio
- */
 section {
-  width: 100%; }
-
-.container {
-  padding: 2rem 1rem 3rem;
-  margin: 0 auto;
-  max-width: 728px;
-  width: 100%; }
+  overflow: hidden; }
 
 /**
- * HEADER - Todos los elementos del header
+ * BACKGROUNDS
  */
-header {
-  font-family: 'Montserrat', sans-serif;
-  padding: 2rem;
-  text-transform: uppercase; }
+.txt-white {
+  color: #F0EFEA; }
 
-.logo {
-  float: left;
-  font-size: 1.6rem;
-  letter-spacing: .8rem; }
+.bg-green {
+  background-color: #48ACA9; }
 
-nav {
-  float: right; }
+.bg-blue {
+  background-color: #3A4853; }
 
-nav a {
-  color: #FFF;
-  font-size: .8rem;
-  letter-spacing: .2rem;
-  line-height: 2.2;
-  margin: auto .4rem; }
-
-nav a:hover {
-  opacity: 0.8; }
+.bg-red {
+  background-color: #EB7A6A; }
 
 /**
  * BOTONES
@@ -477,10 +455,10 @@ button {
   font-weight: 700;
   padding: 0.8rem 1.2rem;
   text-transform: uppercase; }
-
-.btn:hover {
-  opacity: .9;
-  text-decoration: none; }
+  .btn:hover,
+  button:hover {
+    opacity: .9;
+    text-decoration: none; }
 
 /**
  * FORMULARIOS -  Todos los elementos de formulario
@@ -531,24 +509,3 @@ button:hover {
 :placeholder-shown {
   /* Standard */
   color: #fff; }
-
-/**
- * STYLE-GUIDE - Utilizados únicamente para esta guía de estilos
- */
-.brand-font {
-  font-family: 'Montserrat', sans-serif;
-  opacity: .6;
-  text-transform: uppercase;
-  letter-spacing: .2rem; }
-
-.texto-explicativo {
-  border-bottom: solid thin rgba(255, 255, 255, 0.5);
-  margin: 0;
-  opacity: .5;
-  padding-bottom: 1.5rem; }
-
-.barra {
-  margin: 1rem auto;
-  padding: 1rem;
-  font-weight: 700;
-  text-align: center; }

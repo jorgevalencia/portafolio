@@ -1,6 +1,18 @@
+var gulp = require ('gulp');
+var sass = require ('gulp-sass');
+var autoprefixer = require ('gulp-autoprefixer');
+var plumber = require('gulp-plumber');
+var browserSync = require('browser-sync').create();
+
 //ERROR HANDLER
 var beep = require('beepbeep');
 var colors = require('colors');
+
+// VARIABLES
+var path = {
+    src     : 'src',
+    dist    : 'dist'
+};
 
 var onError = function(err) {
   beep([200, 200]);
@@ -12,18 +24,6 @@ var onError = function(err) {
     '\n\n*******************************************************\n\n'.bold.gray );
   this.emit('end');
 };
-
-// VARIABLES
-var path = {
-    src     : 'src',
-    dist    : 'dist'
-};
-
-var gulp = require ('gulp');
-var sass = require ('gulp-sass');
-var autoprefixer = require ('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
-var browserSync = require('browser-sync').create();
 
 // CSS 
 gulp.task( 'css', function(){
@@ -42,29 +42,19 @@ gulp.task( 'css', function(){
 	.pipe(gulp.dest('dist/css'));
 });
 
+// HTML 
+gulp.task('html', function() {
+    return gulp.src('./src/*.html')
+    .pipe(gulp.dest('./dist'));
+});
 
 // WATCH 
-gulp.task('default', ['css'], function(){
-	browserSync.init({
+gulp.task('default', ['css','html'], function() {
+    browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist"
         },
-        files:[
-        	'./dist/css/main.css'
-        ]
+        files: ['./dist/css/main.css']
     });
-	gulp.watch(path.src + '/scss/**/*.scss', ['css']);
-
+    gulp.watch('./src/scss/**/*.scss', ['css']);
 });
-
-// WATCH ================================================
-gulp.task('watch', ['browsersync'], function() {
-    //gulp.watch( path.src + '/**/*.html',            ['html', 'files'] );
-    //gulp.watch( path.src + '/scss/**/*.scss',       ['css'] );
-    //gulp.watch( path.example + '/**/*.scss',        ['css-example'] );
-    //gulp.watch( path.src + '/js/**/*.js',           ['js'] );
-    //gulp.watch( path.src + '/img/**/*.+(png|jpg)',  ['images'] );
-    //gulp.watch( path.src + '/img/**/*.svg',         ['svg'] );
-});
-
-,
