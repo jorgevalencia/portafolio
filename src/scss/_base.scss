@@ -19,7 +19,7 @@ html {
   zoom: 1;
 }
 
-
+.flex { display: flex; }
 /**
  * HTML TAGS - Tags básicos que se se usan en el sitio
  */
@@ -64,7 +64,9 @@ section{
 .bg-red{
 	background-color: $color-red;
 }
-
+.bg-light{
+	background-color: $color-light;
+}
 /**
  * BOTONES
  */

@@ -11,3 +11,10 @@ $color-light: #F0EFEA;
 // Fonts
 $font-normal: 'Montserrat', sans-serif;
 $font-light: 'Montserrat Light', arial;
+
+// Grid
+$susy: (
+  columns: 12,
+  gutters: 0,
+  debug: (image: show),
+);

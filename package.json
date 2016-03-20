@@ -11,7 +11,24 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.2.0"
-  }
+    "gulp-sass": "^2.2.0",
+    "imagemin-pngquant": "^4.2.2",
+    "sass-loader": "^3.2.0",
+    "susy": "^2.2.12"
+  },
+  "dependencies": {
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.11.1",
+    "colors": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgevalencia/portafolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorgevalencia/portafolio/issues"
+  },
+  "homepage": "https://github.com/jorgevalencia/portafolio#readme"
 }

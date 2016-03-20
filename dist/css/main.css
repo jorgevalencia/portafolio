@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://allfont.es/allfont.css?fonts=montserrat-light);
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -6,8 +8,6 @@
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://allfont.es/allfont.css?fonts=montserrat-light);
 article,
 aside,
 details,
@@ -353,6 +353,42 @@ a::-moz-selection {
 a::selection {
   color: #fff; }
 
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 100%, transparent 100%);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 100%, transparent 100%);
+  background-size: 8.33333%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top; }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.container-full {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+
+.container-narrow {
+  width: 41.66667%;
+  float: left; }
+
+.container-big {
+  width: 58.33333%;
+  float: right;
+  margin-right: 0; }
+
+section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 /**
  * LAYOUT - Estructura gráfica del sitio
  */
@@ -384,6 +420,12 @@ section {
     .menu a:hover {
       opacity: 0.8; }
 
+.info-main {
+  padding: 2rem; }
+
+.info-secondary {
+  padding: 2rem; }
+
 /**
  * FIXES
  */
@@ -401,6 +443,12 @@ html {
 .clearfix {
   overflow: auto;
   zoom: 1; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 /**
  * HTML TAGS - Tags básicos que se se usan en el sitio
@@ -444,6 +492,9 @@ section {
 
 .bg-red {
   background-color: #EB7A6A; }
+
+.bg-light {
+  background-color: #F0EFEA; }
 
 /**
  * BOTONES

@@ -1,0 +1,6 @@
+body { @include container(100%); }
+.container-full { @include span(12); }
+.container-narrow { @include span(5); }
+.container-big { @include span(7 last); }
+
+section { display: flex; }

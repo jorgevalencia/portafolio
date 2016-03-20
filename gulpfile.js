@@ -3,7 +3,8 @@ var sass = require ('gulp-sass');
 var autoprefixer = require ('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
-
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 //ERROR HANDLER
 var beep = require('beepbeep');
 var colors = require('colors');
@@ -31,7 +32,9 @@ gulp.task( 'css', function(){
 	.pipe(plumber({
 		errorHandler: onError
 	}))
-	.pipe(sass())
+	.pipe(sass({
+    includePaths: ['./bower_components/breakpoint-sass/stylesheets']
+  }))
 	.pipe(autoprefixer({
 		browsers:[
 			'last 2 versions',
@@ -48,6 +51,21 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+// COMPRESION IMGS 
+gulp.task('img', () => {
+    return gulp.src('src/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [
+                {removeViewBox: false},
+                {cleanupIDs: false}
+            ],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+
+
 // WATCH 
 gulp.task('default', ['css','html'], function() {
     browserSync.init({
@@ -57,4 +75,6 @@ gulp.task('default', ['css','html'], function() {
         files: ['./dist/css/main.css']
     });
     gulp.watch('./src/scss/**/*.scss', ['css']);
+    gulp.watch('./src/*.html', ['html']);
+    gulp.watch('./dist/*.html').on('change',browserSync.reload);
 });
