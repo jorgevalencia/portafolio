@@ -1,0 +1,20 @@
+////////////////////////
+// Variables Partials
+////////////////////////
+
+// Colors 
+$color-blue:#3A4853;
+$color-green: #48ACA9;
+$color-red:#EB7A6A;
+$color-light: #F0EFEA;
+
+// Fonts
+$font-normal: 'Montserrat', sans-serif;
+$font-light: 'Montserrat Light', arial;
+
+// Grid
+$susy: (
+  columns: 12,
+  gutters: 0,
+  debug: (image: show),
+);
