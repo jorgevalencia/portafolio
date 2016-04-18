@@ -4,3 +4,20 @@ body { @include container(100%); }
 .container-big { @include span(7 last); }
 
 section { display: flex; }
+
+.container-full{
+	padding: 3rem;
+}
+
+.container-narrow,
+.container-big{
+	display: flex;
+	justify-content: center;
+}
+
+.info-main{
+	max-width: 80%;
+}
+.info-secondary{
+	max-width: 80%;
+}

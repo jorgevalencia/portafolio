@@ -3,6 +3,7 @@ var sass = require ('gulp-sass');
 var autoprefixer = require ('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
+
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 //ERROR HANDLER
@@ -26,7 +27,7 @@ var onError = function(err) {
   this.emit('end');
 };
 
-// CSS 
+//Convertir el SCSS a CSS
 gulp.task( 'css', function(){
 	return gulp.src('src/scss/main.scss')
 	.pipe(plumber({
@@ -45,29 +46,44 @@ gulp.task( 'css', function(){
 	.pipe(gulp.dest('dist/css'));
 });
 
-// HTML 
+//Copiar el HTML de SRC a DIST
 gulp.task('html', function() {
     return gulp.src('./src/*.html')
     .pipe(gulp.dest('./dist'));
 });
 
-// COMPRESION IMGS 
-gulp.task('img', () => {
-    return gulp.src('src/images/*')
+//Copiar el JS de SRC a DIST
+gulp.task('js', function() {
+    return gulp.src('./src/js/*.js')
+    .pipe(gulp.dest('./dist/js'));
+});
+// COMPRESION IMGS
+// gulp.task('img', () => {
+//     return gulp.src('src/img/*')
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [
+//                 {removeViewBox: false},
+//                 {cleanupIDs: false}
+//             ],
+//             use: [pngquant()]
+//         }))
+//         .pipe(gulp.dest('dist/img'));
+// });
+
+//Copiar las IMG de SRC a DIST
+gulp.task('imagemin', function() {
+    return gulp.src('./src/img/*')
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [
-                {removeViewBox: false},
-                {cleanupIDs: false}
-            ],
+            svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('./dist/img'));
 });
 
-
-// WATCH 
-gulp.task('default', ['css','html'], function() {
+// WATCH
+gulp.task('default', ['css','html','js','imagemin'], function() {
     browserSync.init({
         server: {
             baseDir: "./dist"
@@ -75,6 +91,8 @@ gulp.task('default', ['css','html'], function() {
         files: ['./dist/css/main.css']
     });
     gulp.watch('./src/scss/**/*.scss', ['css']);
+    gulp.watch('./src/img/*', ['imagemin']);
+    gulp.watch('./src/js/*.js', ['js']);
     gulp.watch('./src/*.html', ['html']);
     gulp.watch('./dist/*.html').on('change',browserSync.reload);
 });

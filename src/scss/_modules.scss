@@ -37,8 +37,64 @@ header {
 }
 
 .info-main{
-	padding: 2rem;
+	padding: 3rem;
 }
 .info-secondary{
-	padding: 2rem;
+	padding: 3rem;
 }
+
+.section-intro{
+	.txt-white{
+		max-width: 700px;
+	}
+}
+
+/**
+ * INTRO
+ */
+.section-intro{
+	height: 80vh;
+	.big{
+		font-family: $font-normal;
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin: 1rem 0;
+	}
+	.small{
+		&:after{
+			background-color: $color-red;
+			content: ' ';
+			display: block;
+			height: 5px;
+			margin: 1rem 0;
+			width: 2rem;
+		}
+	}
+	p{
+		font-size: 1.2rem;
+	}
+}
+
+/**
+ * SKILLS
+ */
+.skill-list{
+	li{
+		float: left;
+		margin: 0.8rem;
+		img{
+			height: 60px;
+		}
+	}
+}
+
+/**
+ * PROJECTS
+ */
+ .project-list{
+	li{
+		float: left;
+		width:50%;
+	}
+ }
