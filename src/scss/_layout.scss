@@ -1,23 +1,68 @@
-body { @include container(100%); }
-.container-full { @include span(12); }
-.container-narrow { @include span(5); }
-.container-big { @include span(7 last); }
 
-section { display: flex; }
-
-.container-full{
-	padding: 3rem;
+/**
+ * styles for susy grid
+ */
+@media screen and (min-width: 768px) {
+	body { @include container(100%); }
+	.susy-full { @include span(12); }
+	.susy-narrow { @include span(5); }
+	.susy-big { @include span(7 last); }
 }
 
-.container-narrow,
-.container-big{
-	display: flex;
-	justify-content: center;
+/**
+ * Blocks positioning
+ */
+section {
+	width: 100%;
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+}
+
+.header{
+	position: absolute;;
+}
+
+.section-intro{
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.content{
+	margin: 3rem 2rem;
+	@media screen and (min-width: 768px) {
+		margin: 4rem 3rem;
+	}
+	@media screen and (min-width: 1024px) {
+		margin: 4rem;
+	}
+	@media screen and (min-width: 1366px) {
+		margin: 5rem;
+	}
+}
+
+.info-intro{
+	max-width: 700px;
 }
 
 .info-main{
-	max-width: 80%;
+	position: relative;
+	@media screen and (min-width: 768px) {
+		max-width: 500px;
+	}
 }
+
 .info-secondary{
-	max-width: 80%;
+	position: relative;
+	@media screen and (min-width: 768px) {
+		max-width: 800px;
+	}
+}
+
+.container{
+	overflow: hidden;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+	}
 }

@@ -1,7 +1,24 @@
-@mixin box-sizing( $type: border-box ) {
-    -webkit-box-sizing: $type;
-       -moz-box-sizing: $type;
-         -o-box-sizing: $type;
-        -ms-box-sizing: $type;
-            box-sizing: $type;
+@mixin triangle($color: color) {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid $color;
+	content: ' ';
+	display: block;
+	height: 0;
+  width: 0;
+	position: absolute;
+	top: -3rem;
+	@media screen and (min-width: 768px) {
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left:20px solid $color;
+		left: -3rem;
+		top: 0;
+	}
+	@media screen and (min-width: 1024px) {
+		left: -4rem;
+	}
+	@media screen and (min-width: 1366px) {
+		left: -5rem;
+	}
 }

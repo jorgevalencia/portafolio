@@ -3,6 +3,7 @@ var sass = require ('gulp-sass');
 var autoprefixer = require ('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
+var sourcemaps = require('gulp-sourcemaps');
 
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
@@ -30,6 +31,7 @@ var onError = function(err) {
 //Convertir el SCSS a CSS
 gulp.task( 'css', function(){
 	return gulp.src('src/scss/main.scss')
+  .pipe(sourcemaps.init())
 	.pipe(plumber({
 		errorHandler: onError
 	}))
@@ -43,6 +45,7 @@ gulp.task( 'css', function(){
 			'ie 9'
 		]
 		}))
+  .pipe(sourcemaps.write('./maps'))
 	.pipe(gulp.dest('dist/css'));
 });
 

@@ -14,17 +14,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.clearfix {
-  overflow: auto;
-  zoom: 1;
-}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
 
-.flex { display: flex; }
 /**
  * HTML TAGS - Tags básicos que se se usan en el sitio
  */
 body{
-	color: $color-blue;
+	color: $color-dark;
 	font-family: $font-light;
 	line-height: 1.6;
 }
@@ -33,8 +36,7 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	color: lighten($color-green, 5);
-	text-decoration: underline;
+	color: lighten($color-green, 8);
 }
 img{
 	display: block;
@@ -43,31 +45,48 @@ img{
 }
 h1{
 	font-family: $font-normal;
-	font-size: 2.5rem;
+	font-size: 1.8rem;
 	line-height: 1.2;
+	margin-bottom: 2rem;
+	@media screen and (min-width: 768px) {
+		font-size: 2.2rem;
+	}
+	@media screen and (min-width: 1024px) {
+		font-size: 2.5rem;
+	}
 }
 h2{
+	color: $color-blue;
 	font-family: $font-light;
-	font-size: 1.6rem;
-	margin: 3rem auto 0.5rem;
-	text-transform: uppercase;
+	font-size: 1.3rem;
 	font-weight: 100;
+	margin: 3rem auto 1rem;
+	text-transform: uppercase;
 	&:first-child{
 		margin-top:0;
 	}
+	@media screen and (min-width: 768px) {
+		font-size: 1.6rem;
+	}
 }
 h3, h4, h5, h6{
-	font-size: 2rem;
+	font-size: 1.2rem;
+	@media screen and (min-width: 768px) {
+		font-size: 2rem;
+	}
 }
-section{
-	overflow: hidden;
+p{
+	margin: 1rem auto;
 }
 
 /**
  * BACKGROUNDS
  */
 .txt-white{
-	color: #fff;
+	color: $color-white;
+}
+.txt-light{
+	color: $color-light;
 }
 .bg-green{
 	background-color: $color-green;
@@ -81,14 +100,15 @@ section{
 .bg-light{
 	background-color: $color-light;
 }
+
 /**
  * BOTONES
  */
 .btn,
 button{
 	display: inline-block;
-	line-height: 1.6;
 	font-weight: 700;
+	line-height: 1.6;
 	padding: 0.8rem 1.2rem;
 	text-transform: uppercase;
 	&:hover{
@@ -102,9 +122,9 @@ button{
  */
 input,
 textarea{
-	color: #FFF;
-	background: #4ECDC4;
+	background: $color-blue;
 	border: none;
+	color: $color-white;
 	margin: .5rem auto;
 	width: 100%;
 }
@@ -113,44 +133,60 @@ input{
 	padding: 0 1rem;
 }
 textarea{
+	height: 200px;
 	padding: 1rem;
 }
-button{
-	background: #fff;
+button,
+.btn{
+	background: $color-red;
 	border: none;
-	color: #48ACA9;
+	color: $color-white;
+	display: inline-block;
+	float: right;
+	width: auto;
 }
 button:hover{
 	opacity: .8;
 }
+
 /* Placeholder */
 ::-webkit-input-placeholder{
-  color: #fff;
+  color: $color-white;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #fff;
+  color: $color-white;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #fff;
+  color: $color-white;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #fff;
+  color: $color-white;
 }
 ::-ms-input-placeholder { /* Edge */
-  color: #fff;
+  color: $color-white;
 }
 :placeholder-shown { /* Standard */
-  color: #fff;
+  color: $color-white;
 }
 
 /* Fonts */
-.big{
-
-}
-.small{
-
-}
 .bold{
 	font-family: $font-normal;
 	font-weight: 700;
+}
+
+/* Arrows */
+.info-secondary:before{
+	.section-skills &{
+		@include triangle($color-green);
+	}
+	.section-projects &{
+		@include triangle($color-blue);
+	}
+	.section-bio &{
+		@include triangle($color-red);
+	}
+	.section-contact &{
+		@include triangle($color-green);
+	}
 }
