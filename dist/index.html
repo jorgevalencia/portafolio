@@ -2,31 +2,38 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" l-content="width=device-width, initial-scale=1.0">
 	<title>Jorge Valencia - Style Guide</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,300italic|Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
 	<!--Header & Menu-->
 	<header class="header bg-blue susy-full">
-		<div class="info-header content">
+		<div class="info-header l-content js-show">
 			<div class="logo"><img src="img/logo.svg" alt="Logo Jorge Valencia" /></div>
 			<nav class="menu">
-				<a href="#intro">What I Do</a>
-				<a href="#color">My Work</a>
-				<a href="#btn">Who I Am</a>
-				<a href="#form">Get In Touch</a>
+				<a href="#skills">What I Do</a>
+				<a href="#projects">My Work</a>
+				<a href="#bio">Who I Am</a>
+				<a href="#contact">Get In Touch</a>
+			</nav>
+			<nav class="menu-mobile">
+				<a href="#skills">What I Do</a>
+				<a href="#projects">My Work</a>
+				<a href="#bio">Who I Am</a>
+				<a href="#contact">Get In Touch</a>
 			</nav>
 		</div>
 	</header>
 
 	<!--Intro section-->
-	<section class="section-intro bg-blue" id="intro">
+	<section class="l-section-intro bg-blue" id="intro">
 		<main class="susy-full">
-			<div class="txt-light info-intro content">
+			<div class="txt-light l-info-intro l-content js-show">
 				<p class="small">Hi There, my name is Jorge Valencia</p>
 				<p class="big">I’m a UI/UX designer & front-end developer who makes awesome shit</p>
 				<p>I enjoy making the complex simple, turning problems into clean, attractive and intuitive interface designs.</p>
@@ -37,14 +44,14 @@
 
 	<!--Skills & Experience section-->
 	<section class="section-skills" id="skills">
-		<main class="container bg-green susy-narrow">
-			<div class="txt-white info-main content">
+		<main class="l-container bg-green susy-narrow">
+			<div class="txt-white l-info-main l-content js-show">
 				<h1>Skills & Experience</h1>
 				<p>I bring together all elements of user experience, digital design and front-end development to deliver meaningful aesthetic graphic solutions for multiple devices, including mobile phones and tablets.</p>
 			</div>
 		</main>
-		<aside class="container susy-big">
-			<div class="info-secondary content clearfix">
+		<aside class="l-container susy-big">
+			<div class="l-info-secondary l-content clearfix arrow js-show">
 				<h2>UX/UI DESIGN</h2>
 				<p>As a UX/UI designer I love to create simple, intuitive and beautiful interfaces that will help users to accomplish their goals. I’m involved in the entire design process, starting with the information architecture, following with wireframing and finalizing with the prototypes.</p>
 				<h2>FRONT-END DEVELOPMENT</h2>
@@ -63,15 +70,15 @@
 
 	<!--Projects section-->
 	<section class="section-projects bg-blue" id="projects">
-		<main class="container susy-narrow">
-			<div class="txt-light info-main content">
+		<main class="l-container susy-narrow">
+			<div class="txt-light l-info-main l-content js-show">
 				<h1>Latest projects</h1>
 				<p>I help clients designing digital products and services. My approach involves thinking, challenging and problem solving which I then will translate into compelling user interfaces.</p>
 				<p>See more of my work in <a href="http://behance.com/jorgevalencia" target="blank">Behance</a></p>
 			</div>
 		</main>
-		<aside class="container bg-light susy-big">
-		<div class="info-secondary content clearfix">
+		<aside class="l-container bg-light susy-big">
+		<div class="l-info-secondary l-content clearfix arrow js-show">
 			<ul class="project-list">
 				<li><a href="https://www.behance.net/gallery/24176405/SeeD-Redesign" target="_blank"><img src="img/1.jpg"></a></li>
 				<li><a href="https://www.behance.net/gallery/24175599/Surcos-del-Pop" target="_blank"><img src="img/2.jpg"></a></li>
@@ -86,15 +93,15 @@
 
 	<!--Bio section-->
 	<section class="section-bio" id="bio">
-		<main class="container bg-red susy-narrow">
-		<div class="info-main txt-white content">
+		<main class="l-container bg-red susy-narrow">
+		<div class="l-info-main txt-white l-content">
 			<h1>My life story</h1>
 			<p>As many web designers born before the internet existed, I traveled an atypical professional path. 
 			Being good with words, I graduated as a journalist before getting involved with web design. I decided to learn on my own and started my  career as a web designer and front-end developer.</p>
 		</div>
 		</main>
-		<aside class="container susy-big">
-		<div class="info-secondary content">
+		<aside class="l-container susy-big">
+		<div class="l-info-secondary l-content arrow">
 			<img src="img/jorge-valencia.jpg">
 			<p>Since January, 2005, I’ve worked as a freelancer, lead designer at design studios and as CDO at a news media company. I’ve also earn a Web Design master's degree.
 			My background as a jorunalist gives me a unique vision about the design, focusing on delivering an effective message and not just something pretty.
@@ -106,14 +113,14 @@
 
 	<!--Contact section-->
 	<section class="section-contact" id="contact">
-		<main class="container bg-green susy-narrow">
-		<div class="info-main txt-white content">
+		<main class="l-container bg-green susy-narrow js-show">
+		<div class="l-info-main txt-white l-content">
 			<h1>Let’s talk</h1>
 			<p>I would love to hear from you, so whether you need a quote, have a question or just want me to recommend you a movie, please feel free to drop me a line.</p>
 		</div>
 		</main>
-		<aside class="container bg-light susy-big">
-		<div class="info-secondary content clearfix">
+		<aside class="l-container bg-light susy-big">
+		<div class="l-info-secondary l-content clearfix arrow js-show">
 			<form method="post" action="contactengine.php">
 				<input type="text" placeholder="Tu nombre">
 				<input type="text" placeholder="Tu email">
@@ -126,20 +133,3 @@
 
 </body>
 </html>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-});
-</script>

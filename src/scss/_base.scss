@@ -176,7 +176,7 @@ button:hover{
 }
 
 /* Arrows */
-.info-secondary:before{
+.arrow:before{
 	.section-skills &{
 		@include triangle($color-green);
 	}

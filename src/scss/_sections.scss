@@ -24,12 +24,22 @@
 			opacity: 0.8;
 		}
 	}
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
-
+.menu-mobile{
+	float: right;
+	a{
+	}
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
 /**
  * INTRO
  */
-.section-intro{
+.l-section-intro{
 	.big{
 		font-family: $font-normal;
 		font-size: 2rem;

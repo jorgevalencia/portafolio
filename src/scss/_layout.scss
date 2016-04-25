@@ -23,12 +23,17 @@ section {
 	position: absolute;;
 }
 
-.section-intro{
+.l-section-intro{
+	align-items: flex-end;
 	min-height: 100vh;
 	overflow: hidden;
 }
 
-.content{
+.l-info-intro{
+	max-width: 700px;
+}
+
+.l-content{
 	margin: 3rem 2rem;
 	@media screen and (min-width: 768px) {
 		margin: 4rem 3rem;
@@ -41,28 +46,24 @@ section {
 	}
 }
 
-.info-intro{
-	max-width: 700px;
-}
-
-.info-main{
+.l-info-main{
 	position: relative;
 	@media screen and (min-width: 768px) {
 		max-width: 500px;
 	}
 }
 
-.info-secondary{
+.l-info-secondary{
 	position: relative;
 	@media screen and (min-width: 768px) {
 		max-width: 800px;
 	}
 }
 
-.container{
+.l-container{
 	overflow: hidden;
 	@media screen and (min-width: 768px) {
 		display: flex;
-		justify-content: center;
+		justify-l-content: center;
 	}
 }

@@ -393,49 +393,51 @@ section {
 .header {
   position: absolute; }
 
-.section-intro {
+.l-section-intro {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+              -ms-grid-row-align: flex-end;
+          align-items: flex-end;
   min-height: 100vh;
   overflow: hidden; }
 
-.content {
-  margin: 3rem 2rem; }
-  @media screen and (min-width: 768px) {
-    .content {
-      margin: 4rem 3rem; } }
-  @media screen and (min-width: 1024px) {
-    .content {
-      margin: 4rem; } }
-  @media screen and (min-width: 1366px) {
-    .content {
-      margin: 5rem; } }
-
-.info-intro {
+.l-info-intro {
   max-width: 700px; }
 
-.info-main {
+.l-content {
+  margin: 3rem 2rem; }
+  @media screen and (min-width: 768px) {
+    .l-content {
+      margin: 4rem 3rem; } }
+  @media screen and (min-width: 1024px) {
+    .l-content {
+      margin: 4rem; } }
+  @media screen and (min-width: 1366px) {
+    .l-content {
+      margin: 5rem; } }
+
+.l-info-main {
   position: relative; }
   @media screen and (min-width: 768px) {
-    .info-main {
+    .l-info-main {
       max-width: 500px; } }
 
-.info-secondary {
+.l-info-secondary {
   position: relative; }
   @media screen and (min-width: 768px) {
-    .info-secondary {
+    .l-info-secondary {
       max-width: 800px; } }
 
-.container {
+.l-container {
   overflow: hidden; }
   @media screen and (min-width: 768px) {
-    .container {
+    .l-container {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+      justify-l-content: center; } }
 
 /**
  * HEADER - Todos los elementos del header
@@ -460,21 +462,30 @@ section {
     margin: auto .4rem; }
     .menu a:hover {
       opacity: 0.8; }
+  @media screen and (max-width: 767px) {
+    .menu {
+      display: none; } }
+
+.menu-mobile {
+  float: right; }
+  @media screen and (min-width: 768px) {
+    .menu-mobile {
+      display: none; } }
 
 /**
  * INTRO
  */
-.section-intro .big {
+.l-section-intro .big {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   margin: 1rem 0; }
   @media screen and (min-width: 768px) {
-    .section-intro .big {
+    .l-section-intro .big {
       font-size: 3rem; } }
 
-.section-intro .small:after {
+.l-section-intro .small:after {
   background-color: #EB7A6A;
   content: ' ';
   display: block;
@@ -482,7 +493,7 @@ section {
   margin: 1rem 0;
   width: 2rem; }
 
-.section-intro p {
+.l-section-intro p {
   font-size: 1.2rem; }
 
 /**
@@ -491,6 +502,10 @@ section {
 .skill-list li {
   float: left;
   margin: 0.8rem; }
+  .skill-list li:first-child {
+    margin-left: 0; }
+  .skill-list li:last-child {
+    margin-right: 0; }
   .skill-list li img {
     height: 60px; }
 
@@ -683,7 +698,7 @@ button:hover {
   font-weight: 700; }
 
 /* Arrows */
-.section-skills .info-secondary:before {
+.section-skills .arrow:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #48ACA9;
@@ -694,20 +709,20 @@ button:hover {
   position: absolute;
   top: -3rem; }
   @media screen and (min-width: 768px) {
-    .section-skills .info-secondary:before {
+    .section-skills .arrow:before {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid #48ACA9;
       left: -3rem;
       top: 0; } }
   @media screen and (min-width: 1024px) {
-    .section-skills .info-secondary:before {
+    .section-skills .arrow:before {
       left: -4rem; } }
   @media screen and (min-width: 1366px) {
-    .section-skills .info-secondary:before {
+    .section-skills .arrow:before {
       left: -5rem; } }
 
-.section-projects .info-secondary:before {
+.section-projects .arrow:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #3A4853;
@@ -718,20 +733,20 @@ button:hover {
   position: absolute;
   top: -3rem; }
   @media screen and (min-width: 768px) {
-    .section-projects .info-secondary:before {
+    .section-projects .arrow:before {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid #3A4853;
       left: -3rem;
       top: 0; } }
   @media screen and (min-width: 1024px) {
-    .section-projects .info-secondary:before {
+    .section-projects .arrow:before {
       left: -4rem; } }
   @media screen and (min-width: 1366px) {
-    .section-projects .info-secondary:before {
+    .section-projects .arrow:before {
       left: -5rem; } }
 
-.section-bio .info-secondary:before {
+.section-bio .arrow:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #EB7A6A;
@@ -742,20 +757,20 @@ button:hover {
   position: absolute;
   top: -3rem; }
   @media screen and (min-width: 768px) {
-    .section-bio .info-secondary:before {
+    .section-bio .arrow:before {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid #EB7A6A;
       left: -3rem;
       top: 0; } }
   @media screen and (min-width: 1024px) {
-    .section-bio .info-secondary:before {
+    .section-bio .arrow:before {
       left: -4rem; } }
   @media screen and (min-width: 1366px) {
-    .section-bio .info-secondary:before {
+    .section-bio .arrow:before {
       left: -5rem; } }
 
-.section-contact .info-secondary:before {
+.section-contact .arrow:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #48ACA9;
@@ -766,17 +781,17 @@ button:hover {
   position: absolute;
   top: -3rem; }
   @media screen and (min-width: 768px) {
-    .section-contact .info-secondary:before {
+    .section-contact .arrow:before {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid #48ACA9;
       left: -3rem;
       top: 0; } }
   @media screen and (min-width: 1024px) {
-    .section-contact .info-secondary:before {
+    .section-contact .arrow:before {
       left: -4rem; } }
   @media screen and (min-width: 1366px) {
-    .section-contact .info-secondary:before {
+    .section-contact .arrow:before {
       left: -5rem; } }
 
 /*# sourceMappingURL=maps/main.css.map */
