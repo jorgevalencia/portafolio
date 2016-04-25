@@ -34,9 +34,9 @@ body{
 a{
 	color: $color-green;
 	text-decoration: none;
-}
-a:hover{
-	color: lighten($color-green, 8);
+	&:hover{
+		color: lighten($color-green, 8);
+	}
 }
 img{
 	display: block;

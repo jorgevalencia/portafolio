@@ -101,6 +101,12 @@
   * BIO
   */
 	.section-bio{
+		a{
+			color: $color-red;
+			&:hover{
+				color: lighten($color-red, 8);
+			}
+		}
 	 	img{
 			margin-bottom: 2rem;
 	 	}
