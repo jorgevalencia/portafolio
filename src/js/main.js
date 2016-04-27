@@ -14,31 +14,16 @@ $(document).ready(function(){
         });
     });
 
-    // // elements show animation
-    // tiles = $(".js-show").fadeTo(0, 0),
-    // $(".js-show").hide();
-    //
-    // $(window).scroll(function(d,h) {
-    //     tiles.each(function(i) {
-    //         a = $(this).offset().top + $(this).height();
-    //         b = $(window).scrollTop() + $(window).height();
-    //         if (a < b) $(this).fadeTo(500,1).addClass("visible");
-    //     });
-    //  if (tiles.hasClass("visible"))  {
-    //     var a = $(".js-show"), delayTime = 300, i = 0;
-    //
-    //     function animateSideBar() {
-    //         if(i >= a.length) return;
-    //
-    //         // call fadeIn, and pass this function itself as the completion callback
-    //         $(a[i]).fadeIn(delayTime, animateSideBar);
-    //
-    //         i++;
-    //     }
-    //
-    //     animateSideBar(); // start it
-    //
-    // }
-    // });
+    // menu animation
+    $( ".menu-btn" ).on( "click", function() {
+      $(this).toggleClass( "closed" );
+      $('.menu-nav').toggleClass( "closed" );
+    });
+
+    // content animation
+    $('.js-show').addClass("hidden").viewportChecker({
+	    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
+	    offset: 100
+	   });
 
 });

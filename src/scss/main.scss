@@ -1,10 +1,11 @@
 ////////////////////////
 // Style File
 ////////////////////////
+@import 'variables';
 @import 'mixins';
 @import 'imports';
-@import 'variables';
 @import 'normalize';
 @import 'layout';
 @import 'sections';
 @import 'base';
+@import 'animate';

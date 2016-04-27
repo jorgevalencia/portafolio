@@ -21,7 +21,7 @@ html {
 	content: " ";
 	clear: both;
 	height: 0;
-	}
+}
 
 /**
  * HTML TAGS - Tags básicos que se se usan en el sitio
@@ -189,4 +189,12 @@ button:hover{
 	.section-contact &{
 		@include triangle($color-green);
 	}
+}
+
+//animation
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
 }

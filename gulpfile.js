@@ -58,7 +58,8 @@ gulp.task('html', function() {
 //Copiar el JS de SRC a DIST
 gulp.task('js', function() {
     return gulp.src('./src/js/*.js')
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.stream());
 });
 // COMPRESION IMGS
 // gulp.task('img', () => {
