@@ -11,59 +11,62 @@
 		width: 95px;
 	}
 }
-//Menu Desktop
+//Menu
 .menu{
-	float: right;
+	//Menu Mobile
+	padding-top: 5rem;
+	position: absolute;
+    background: $color-green;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transition: .3s ease-in-out;
+    width: 200px;
+    z-index: 10;
 	a{
 		color: $color-light;
+		display: block;
 		font-family: $font-normal;
 		font-size: 1rem;
 		letter-spacing: 1px;
-		line-height: 2.2;
-		margin: auto .4rem;
-		&:hover{
-			opacity: 0.8;
+		padding: .5rem 2rem;
+	}
+  	&.closed{
+  		right: -200px;
+  	}
+	//Menu Desktop
+	@media screen and (min-width: 768px) {
+		float: right;
+		height: auto;
+		padding: 0;
+		position: relative;
+		background: none;
+		width: auto;
+		a{
+			display: inline-block;
+			line-height: 2.2;
+			padding: 1rem;
+			&:hover{
+				opacity: 0.8;
+			}
 		}
 	}
-	@media screen and (max-width: 767px) {
-		display: none;
-	}
 }
-//Menu Mobile
-.menu-mobile {
-  position: fixed;
-  height: 100%;
-  top: 0;
-  right: 0;
-  width: 200px;
-  background: #fff;
-  box-shadow: 0px 0px 15px rgba(0,0,0,.6);
-  box-sizing: border-box;
-  transition: .3s ease-in-out;
-  color: #000;
-  z-index: 1;
+
+//Menu Mobile Button
+.menu-mobile-btn{
+    position: relative;
+    z-index: 20;
+    float: right;
+    padding: 1rem;
 	@media screen and (min-width: 768px) {
 		display: none;
 	}
-	.menu-nav.closed{
-		right: -200px;
-	}
-}
-.menu-btn{
-	background: rgba(0,0,0,.6);
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	position:relative;
-	margin: 10px 10px;
-	position: fixed;
-	top: 8px;
-	right: 0px;
 	span{
 		position: absolute;
 		height: 3px;
 		border-radius: 2px;
-		background: #fff;
+		background: $color-light;
 		-webkit-transition: all .4s ease;
 		-moz-transition: all .4s ease;
 		transition: all .4s ease;
@@ -79,42 +82,26 @@
 			top: 20px;
 		}
 	}
-	 &.closed{
-		span{
-    	width: 20px;
-			&.one{
-				width: 20px;
+	&.closed span{
+		&.one{
+			width: 20px;
 		    top: 13px;
 		    left: 5px;
-				transform: rotate(225deg);
-			}
-			&.two{
-				width: 3px;
-		    left: 12px;
-			}
-			&.three{
-				width: 20px;
+			transform: rotate(225deg);
+		}
+		&.two{
+			width: 3px;
+	    	left: 12px;
+		}
+		&.three{
+			width: 20px;
 		    top: 13px;
 		    left: 5px;
-				transform: rotate(-225deg);
-			}
+			transform: rotate(-225deg);
 		}
 	}
 }
-.menu-mobile{
-	padding: 0;
-  margin-top: 50px;
-	li{
-		list-style: none;
-	  margin: 15px;
-		a{
-			list-style: none;
-		  font-size: 20px;
-		  font-weight: 100;
-		  color: #000;
-		}
-	}
-}
+
 /**
  * INTRO
  */

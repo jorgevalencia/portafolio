@@ -15,9 +15,9 @@ $(document).ready(function(){
     });
 
     // menu animation
-    $( ".menu-btn" ).on( "click", function() {
+    $( ".menu-mobile-btn" ).on( "click", function() {
       $(this).toggleClass( "closed" );
-      $('.menu-nav').toggleClass( "closed" );
+      $('.menu').toggleClass( "closed" );
     });
 
     // content animation
@@ -25,5 +25,12 @@ $(document).ready(function(){
 	    classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
 	    offset: 100
 	   });
+
+    // menu mobile
+    if ($(window).width() < 768) {
+       $('.menu').addClass('closed');
+    } else {
+       $('.menu').removeClass('closed');
+    }
 
 });

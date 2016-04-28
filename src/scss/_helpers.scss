@@ -1,0 +1,76 @@
+/**
+ * FIXES
+ */
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*{
+  text-renborder-boxdering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+//JS animation
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+/**
+ * BACKGROUNDS
+ */
+.txt-white{
+	color: $color-white;
+}
+.txt-light{
+	color: $color-light;
+}
+.bg-green{
+	background-color: $color-green;
+}
+.bg-blue{
+	background-color: $color-blue;
+}
+.bg-red{
+	background-color: $color-red;
+}
+.bg-light{
+	background-color: $color-light;
+}
+
+/* Fonts */
+.bold{
+	font-family: $font-normal;
+	font-weight: 700;
+}
+
+/* Arrows */
+.arrow:before{
+	.section-skills &{
+		@include triangle($color-green);
+	}
+	.section-projects &{
+		@include triangle($color-blue);
+	}
+	.section-bio &{
+		@include triangle($color-red);
+	}
+	.section-contact &{
+		@include triangle($color-green);
+	}
+}
