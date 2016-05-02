@@ -160,8 +160,11 @@
 		float: left;
 		width:50%;
 	}
-	img:hover{
-		opacity: .8;
+	img{
+		transition: .3s ease-in-out;
+		&:hover{
+			opacity: .8;
+		}	
 	}
  }
 

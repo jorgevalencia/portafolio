@@ -15,8 +15,9 @@ body{
 a{
 	color: $color-green;
 	text-decoration: none;
+	transition: .3s ease-in-out;
 	&:hover{
-		color: lighten($color-green, 8);
+		color: lighten($color-green, 10);
 	}
 }
 img{
@@ -106,9 +107,10 @@ button,
 	display: inline-block;
 	float: right;
 	width: auto;
+	transition: .3s ease-in-out;
 }
 button:hover{
-	opacity: .8;
+	background: lighten($color-red, 12);
 }
 
 /* Placeholder */
