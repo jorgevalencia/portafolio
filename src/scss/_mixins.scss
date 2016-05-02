@@ -1,3 +1,16 @@
+@mixin clearfix {
+    *zoom: 1; // IE6/7 support :/ :( --> update please dinosaurs also were here once
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 @mixin triangle($color: color) {
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;

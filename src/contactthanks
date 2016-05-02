@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jorge Valencia - UI/UX Designer & Front-End Developer</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,300italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<!--Header & Menu-->
+	<header class="header bg-blue susy-full">
+		<div class="info-header l-container">
+			<div class="logo"><img src="img/logo.svg" alt="Logo Jorge Valencia" /></div>
+			<!--Menu-->
+			<a class="menu-mobile-btn">
+					<span class="one"></span>
+					<span class="two"></span>
+					<span class="three"></span>
+			</a>
+			<nav class="menu closed">
+				<a href="#skills">What I Do</a>
+				<a href="#projects">My Work</a>
+				<a href="#bio">Who I Am</a>
+				<a href="#contact">Get In Touch</a>
+			</nav>
+		</div>
+	</header>
+
+	<!--Intro section-->
+	<section class="l-section-intro bg-blue" id="intro">
+		<main class="susy-full">
+			<div class="txt-light l-info-intro l-container js-show">
+				<p class="big">Gracias por contactarnos, tu mensaje ha sido enviado y pronto tendrás una respuesta</p>
+			</div>
+		</main>
+	</section>
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/viewportchecker.js"></script>
+<script type="text/javascript" src="js/main.js"></script>

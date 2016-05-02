@@ -424,7 +424,13 @@ section {
       max-width: 500px; } }
 
 .l-info-secondary {
-  position: relative; }
+  position: relative;
+  *zoom: 1; }
+  .l-info-secondary:before, .l-info-secondary:after {
+    content: " ";
+    display: table; }
+  .l-info-secondary:after {
+    clear: both; }
   @media screen and (min-width: 768px) {
     .l-info-secondary {
       max-width: 800px; } }
