@@ -38,13 +38,14 @@ section {
 	@media screen and (min-width: 1366px) {
 		padding: 5rem;
 	}
-	&.l-info-intro{
-		@media screen and (min-width: 1280px) {
-			max-width: 70%;
-		}
-		@media screen and (min-height: 800px) and (min-width: 1280px) {
-			padding-bottom: 10%;
-		}
+}
+
+.l-info-intro{
+	@media screen and (min-width: 1280px) {
+		max-width: 70%;
+	}
+	@media screen and (min-height: 800px) {
+		margin-bottom: 10%;
 	}
 }
 
