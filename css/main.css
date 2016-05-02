@@ -480,8 +480,10 @@ section {
     font-size: 1rem;
     letter-spacing: 1px;
     padding: .5rem 2rem; }
-  .menu.closed {
-    right: -200px; }
+  @media screen and (max-width: 767px) {
+    .menu.js-closed {
+      position: fixed;
+      right: -200px; } }
   @media screen and (min-width: 768px) {
     .menu {
       float: right;
@@ -520,17 +522,17 @@ section {
       top: 14px; }
     .menu-mobile-btn span.three {
       top: 20px; }
-  .menu-mobile-btn.closed span.one {
+  .menu-mobile-btn.js-closed span.one {
     width: 20px;
     top: 13px;
     left: 5px;
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
             transform: rotate(225deg); }
-  .menu-mobile-btn.closed span.two {
+  .menu-mobile-btn.js-closed span.two {
     width: 3px;
     left: 12px; }
-  .menu-mobile-btn.closed span.three {
+  .menu-mobile-btn.js-closed span.three {
     width: 20px;
     top: 13px;
     left: 5px;
@@ -582,8 +584,11 @@ section {
   float: left;
   width: 50%; }
 
-.project-list img:hover {
-  opacity: .8; }
+.project-list img {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  .project-list img:hover {
+    opacity: .8; }
 
 /**
   * BIO
@@ -610,9 +615,11 @@ body {
 
 a {
   color: #48ACA9;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
   a:hover {
-    color: #60bdba; }
+    color: #67c0bd; }
 
 img {
   display: block;
@@ -697,34 +704,36 @@ button,
   color: #FFF;
   display: inline-block;
   float: right;
-  width: auto; }
+  width: auto;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
 
 button:hover {
-  opacity: .8; }
+  background: #f2aaa0; }
 
 /* Placeholder */
 ::-webkit-input-placeholder {
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 ::-ms-input-placeholder {
   /* Edge */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :placeholder-shown {
   /* Standard */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 /**
  * FIXES
