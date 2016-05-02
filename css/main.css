@@ -411,6 +411,12 @@ section {
   @media screen and (min-width: 1366px) {
     .l-container {
       padding: 5rem; } }
+  @media screen and (min-width: 1280px) {
+    .l-container.l-info-intro {
+      max-width: 70%; } }
+  @media screen and (min-height: 800px) and (min-width: 1280px) {
+    .l-container.l-info-intro {
+      padding-bottom: 10%; } }
 
 .l-section-intro {
   -webkit-box-align: end;
@@ -420,14 +426,6 @@ section {
           align-items: flex-end;
   min-height: 100vh;
   overflow: hidden; }
-
-@media screen and (min-width: 1280px) {
-  .l-info-intro {
-    max-width: 70%; } }
-
-@media screen and (min-height: 800px) and (min-width: 1280px) {
-  .l-info-intro {
-    padding-bottom: 10%; } }
 
 .l-info-main {
   position: relative; }
