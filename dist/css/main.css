@@ -584,11 +584,8 @@ section {
   float: left;
   width: 50%; }
 
-.project-list img {
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
-  .project-list img:hover {
-    opacity: .8; }
+.project-list img:hover {
+  opacity: .8; }
 
 /**
   * BIO
