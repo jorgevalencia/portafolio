@@ -30,7 +30,7 @@ $(document).ready(function(){
     if ($(window).width() < 768) {
        $('.menu').addClass('js-closed');
     } else {
-       $('.menu').removeClass('js-losed');
+       $('.menu').removeClass('js-closed');
     }
 
 });

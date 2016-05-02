@@ -27,20 +27,33 @@ section {
 	}
 }
 
+.l-container{
+	padding: 3rem 2rem;
+	@media screen and (min-width: 768px) {
+		padding: 4rem 3rem;
+	}
+	@media screen and (min-width: 1024px) {
+		padding: 4rem;
+	}
+	@media screen and (min-width: 1366px) {
+		padding: 5rem;
+	}
+	&.l-info-intro{
+		@media screen and (min-width: 1280px) {
+			max-width: 70%;
+		}
+		@media screen and (min-height: 800px) and (min-width: 1280px) {
+			padding-bottom: 10%;
+		}
+	}
+}
+
 .l-section-intro{
 	align-items: flex-end;
 	min-height: 100vh;
 	overflow: hidden;
 }
 
-.l-info-intro{
-	@media screen and (min-width: 1280px) {
-		max-width: 70%;
-	}
-	@media screen and (min-height: 800px) {
-		padding-bottom: 15%;
-	}
-}
 
 .l-info-main{
 	position: relative;
@@ -54,19 +67,6 @@ section {
 	@include clearfix;
 	@media screen and (min-width: 768px) {
 		max-width: 800px;
-	}
-}
-
-.l-container{
-	padding: 3rem 2rem;
-	@media screen and (min-width: 768px) {
-		padding: 4rem 3rem;
-	}
-	@media screen and (min-width: 1024px) {
-		padding: 4rem;
-	}
-	@media screen and (min-width: 1366px) {
-		padding: 5rem;
 	}
 }
 

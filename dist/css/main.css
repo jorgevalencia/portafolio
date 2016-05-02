@@ -400,6 +400,24 @@ section {
     .header {
       position: absolute; } }
 
+.l-container {
+  padding: 3rem 2rem; }
+  @media screen and (min-width: 768px) {
+    .l-container {
+      padding: 4rem 3rem; } }
+  @media screen and (min-width: 1024px) {
+    .l-container {
+      padding: 4rem; } }
+  @media screen and (min-width: 1366px) {
+    .l-container {
+      padding: 5rem; } }
+  @media screen and (min-width: 1280px) {
+    .l-container.l-info-intro {
+      max-width: 70%; } }
+  @media screen and (min-height: 800px) and (min-width: 1280px) {
+    .l-container.l-info-intro {
+      padding-bottom: 10%; } }
+
 .l-section-intro {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
@@ -408,14 +426,6 @@ section {
           align-items: flex-end;
   min-height: 100vh;
   overflow: hidden; }
-
-@media screen and (min-width: 1280px) {
-  .l-info-intro {
-    max-width: 70%; } }
-
-@media screen and (min-height: 800px) {
-  .l-info-intro {
-    padding-bottom: 15%; } }
 
 .l-info-main {
   position: relative; }
@@ -434,18 +444,6 @@ section {
   @media screen and (min-width: 768px) {
     .l-info-secondary {
       max-width: 800px; } }
-
-.l-container {
-  padding: 3rem 2rem; }
-  @media screen and (min-width: 768px) {
-    .l-container {
-      padding: 4rem 3rem; } }
-  @media screen and (min-width: 1024px) {
-    .l-container {
-      padding: 4rem; } }
-  @media screen and (min-width: 1366px) {
-    .l-container {
-      padding: 5rem; } }
 
 .l-center {
   margin: auto; }
@@ -482,6 +480,7 @@ section {
     padding: .5rem 2rem; }
   @media screen and (max-width: 767px) {
     .menu.js-closed {
+      position: fixed;
       right: -200px; } }
   @media screen and (min-width: 768px) {
     .menu {
@@ -521,17 +520,17 @@ section {
       top: 14px; }
     .menu-mobile-btn span.three {
       top: 20px; }
-  .menu-mobile-btn.closed span.one {
+  .menu-mobile-btn.js-closed span.one {
     width: 20px;
     top: 13px;
     left: 5px;
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
             transform: rotate(225deg); }
-  .menu-mobile-btn.closed span.two {
+  .menu-mobile-btn.js-closed span.two {
     width: 3px;
     left: 12px; }
-  .menu-mobile-btn.closed span.three {
+  .menu-mobile-btn.js-closed span.three {
     width: 20px;
     top: 13px;
     left: 5px;
