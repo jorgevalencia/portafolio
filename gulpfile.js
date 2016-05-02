@@ -86,11 +86,11 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('./dist/img'));
 });
 
-//deploy
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
+// //deploy
+// gulp.task('deploy', function() {
+//   return gulp.src('./dist/**/*')
+//     .pipe(ghPages());
+// });
 
 // WATCH
 gulp.task('default', ['css','html','js','imagemin'], function() {

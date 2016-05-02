@@ -480,8 +480,9 @@ section {
     font-size: 1rem;
     letter-spacing: 1px;
     padding: .5rem 2rem; }
-  .menu.closed {
-    right: -200px; }
+  @media screen and (max-width: 767px) {
+    .menu.js-closed {
+      right: -200px; } }
   @media screen and (min-width: 768px) {
     .menu {
       float: right;
@@ -704,27 +705,27 @@ button:hover {
 
 /* Placeholder */
 ::-webkit-input-placeholder {
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 ::-ms-input-placeholder {
   /* Edge */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 :placeholder-shown {
   /* Standard */
-  color: #FFF; }
+  color: rgba(240, 239, 234, 0.5); }
 
 /**
  * FIXES

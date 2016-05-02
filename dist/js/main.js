@@ -16,8 +16,8 @@ $(document).ready(function(){
 
     // menu animation
     $( ".menu-mobile-btn" ).on( "click", function() {
-      $(this).toggleClass( "closed" );
-      $('.menu').toggleClass( "closed" );
+      $(this).toggleClass( "js-closed" );
+      $('.menu').toggleClass( "js-closed" );
     });
 
     // content animation
@@ -28,9 +28,9 @@ $(document).ready(function(){
 
     // menu mobile
     if ($(window).width() < 768) {
-       $('.menu').addClass('closed');
+       $('.menu').addClass('js-closed');
     } else {
-       $('.menu').removeClass('closed');
+       $('.menu').removeClass('js-losed');
     }
 
 });
